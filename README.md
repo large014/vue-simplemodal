@@ -1,9 +1,34 @@
 # vue-simplemodal
+モーダルコンテンツを簡易に実装するコンポーネント。  
+[DEMO](https://large014.github.io/vue-simplemodal/)  
 
-## Project setup
+## Install
 ```
-npm install
+./src/components/modal/SimpleModal.vue をコピー
 ```
+
+### Usage
+```
+import SimpleModal from './components/modal/SimpleModal.vue'
+
+//--- <SimpleModal>タグの中に、クローズボタン、モーダルコンテンツを設定してください。
+<SimpleModal ref="simplemodal" :color='"rgba(0,0,0, 0.35)"'>
+    <CloseBtn slot="modalCloseBtn"/>
+    <SimpleDialog slot="modalContents" title="これはテスト" msg="This will reset your device to its default factory settings." btn1_txt="CANCEL" btn2_txt="ACCEPT"/>
+</SimpleModal>  
+
+-----------------------------------------------------------
+
+```
+・メソッド
+[show] モーダルコンテンツを表示  
+[hide] モーダルコンテンツを表示  
+
+<SimpleModal>タグの中に設定したコンポーネントからモーダルを非表示にする場合は、
+下記のイベント通知してください。  
+$root.$emit('modal-hide-evt')"　  
+```
+
 
 ### Compiles and hot-reloads for development
 ```
