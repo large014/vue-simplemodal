@@ -32,7 +32,7 @@ export default {
 .closeBtn{
   position: absolute;
   right: 10px;
-  top: 38%;
+  top: 30%;
   transform: translate(-50%, 0)
 }
 </style>

@@ -5,9 +5,8 @@
       <button @click="modalHide">非表示</button>
     </div>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <SimpleModal ref="simplemodal" transitionType="fead">
+    <SimpleModal ref="simplemodal" :color='"rgba(0,0,0, 0.35)"'>
       <CloseBtn slot="modalCloseBtn"/>
-      <!-- <TestDialog/> -->
       <SimpleDialog slot="modalContents" title="これはテスト" msg="This will reset your device to its default factory settings." btn1_txt="CANCEL" btn2_txt="ACCEPT"/>
     </SimpleModal>
   </div>
@@ -17,14 +16,12 @@
 import SimpleModal from './components/modal/SimpleModal.vue'
 import SimpleDialog from './components/modal/SimpleDialog.vue'
 import CloseBtn from './components/modal/CloseBtn.vue'
-// import TestDialog from './components/modal/TestDialog.vue'
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
   components: {
     SimpleModal,
-    // TestDialog,
     SimpleDialog,
     CloseBtn,
     HelloWorld

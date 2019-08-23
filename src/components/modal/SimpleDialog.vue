@@ -1,11 +1,11 @@
 <template>
-  <div ref="simpleDialog" class="simpleDialog_wrappear">
+  <div class="simpleDialog_wrappear">
     <div class="inner">
       <p class="title">{{title}}</p>
       <p class="msg">{{msg}}</p>
       <div class="uiarea">
-        <p ref="btn1" class="btn _1">{{btn1_txt}}</p>
-        <p ref="btn2" class="btn _2">{{btn2_txt}}</p>
+        <p ref="btn1" class="btn _1" @click="$root.$emit('modal-hide-evt')">{{btn1_txt}}</p>
+        <p ref="btn2" class="btn _2" @click="$root.$emit('modal-hide-evt')">{{btn2_txt}}</p>
       </div>
     </div>
   </div>
@@ -55,6 +55,8 @@ export default {
 }
 
 .btn{
+  cursor: pointer;
+  user-select:none;
   &._1{
     margin-right: 10px;
   }
