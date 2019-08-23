@@ -27,9 +27,11 @@ import SimpleModal from './components/modal/SimpleModal.vue'
 [show] モーダルコンテンツを表示  
 [hide] モーダルコンテンツを表示  
 
+・イベント  
+$root.$emit('modal-hide-evt')"  
+
 <SimpleModal>タグの中に設定したコンポーネントからモーダルを非表示にする場合は、  
 下記のイベント通知してください。  
-$root.$emit('modal-hide-evt')"　  
 ```
 
 
